@@ -1,6 +1,13 @@
 void main() {
   greet("abdullah");
-  isOdd(5);
+
+  print(isOdd(56));
+  print(isOdd(13));
+
+  print(squareOrDouble(5));
+  print(squareOrDouble(6));
+
+  print(oddsSmallerThan(15));
 }
 
 /**
@@ -43,10 +50,18 @@ bool isOdd(int n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
-// int oddsSmallerThan(int n) {
-// Your code here
+int oddsSmallerThan(int n) {
+  // Your code here
+  int total = 0;
 
-// }
+  for (int i = 1; i < n; i++) {
+    if (isOdd(i)) {
+      total++;
+    }
+  }
+
+  return total;
+}
 
 /**
  * squareOrDouble(n):
@@ -58,11 +73,11 @@ bool isOdd(int n) {
  * squareOrDouble(16) -> 32
  * squareOrDouble(9) -> 81
  */
-// int squareOrDouble(int n) {
-//   // Your code here
-//   if (isOdd(n)) {
-//     return n * n;
-//   } else {
-//     return n * 2;
-//   }
-// }
+// Your code here
+int squareOrDouble(int n) {
+  if (isOdd(n)) {
+    return n * n;
+  } else {
+    return n * 2;
+  }
+}
